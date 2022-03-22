@@ -12,7 +12,7 @@ from finrl.config_tickers import DOW_30_TICKER
 from finrl.finrl_meta.data_processor import DataProcessor
 
 # construct environment
-from finrl.finrl_meta.env_stock_trading.env_stocktrading_np import StockTradingEnv
+from finrl.finrl_meta.env_stock_trading.env_stocktrading import StockTradingEnv
 
 def train(
         start_date,
@@ -34,7 +34,11 @@ def train(
     data = dp.add_technical_indicator(data, technical_indicator_list)
     if if_vix:
         data = dp.add_vix(data)
+    print(data.head())
     price_array, tech_array, turbulence_array = dp.df_to_array(data, if_vix)
+    print(price_array)
+    print(tech_array)
+    print(turbulence_array)
     env_config = {
         "price_array": price_array,
         "tech_array": tech_array,

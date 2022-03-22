@@ -41,6 +41,7 @@ class StockTradingEnv(gym.Env):
         mode="",
         iteration="",
     ):
+        print("CREATE")
         self.day = day
         self.df = df
         self.stock_dim = stock_dim
