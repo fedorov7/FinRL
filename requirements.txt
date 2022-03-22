@@ -12,16 +12,12 @@ matplotlib
 scikit-learn>=0.21.0
 gym>=0.17
 stable-baselines3[extra]
-ray[default]
-ray[tune]
-lz4
 tensorboardX
 gputil
 
 # market data & paper trading API
 exchange_calendars
 alpaca_trade_api
-ccxt>=1.66.32
 jqdatasdk
 wrds
 

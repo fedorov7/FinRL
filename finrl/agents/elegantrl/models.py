@@ -61,11 +61,11 @@ class DRLAgent:
                 model.learning_rate = model_kwargs["learning_rate"]
                 model.batch_size = model_kwargs["batch_size"]
                 model.gamma = model_kwargs["gamma"]
-                model.seed = model_kwargs["seed"]
+                model.random_seed = model_kwargs["seed"]
                 model.net_dim = model_kwargs["net_dimension"]
                 model.target_step = model_kwargs["target_step"]
                 model.eval_gap = model_kwargs["eval_gap"]
-                model.eval_times = model_kwargs["eval_times"]
+                # model.eval_times = model_kwargs["eval_times"]
             except BaseException:
                 raise ValueError(
                     "Fail to read arguments, please check 'model_kwargs' input."
